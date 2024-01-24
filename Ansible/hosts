@@ -1,0 +1,23 @@
+[csr]
+CSR1kv ansible_host=192.168.56.101 ansible_user=cisco ansible_password=cisco123! enable_password=cisco123! ansible_network_os=ios
+
+[routers]
+CSR1kv ansible_host=192.168.56.101 ansible_user=cisco ansible_password=cisco123! enable_password=cisco123! ansible_network_os=ios  
+
+[routers]
+CSR1kv ansible_host=192.168.56.101 ansible_user=cisco ansible_password=cisco123! enable_password=cisco123! ansible_network_os=ios ansible_python_interpreter=/usr/bin/python3
+; [all_routers]
+; CSR1kv ansible_host=192.168.56.101 ansible_user=cisco ansible_password=cisco123! enable_password=cisco123! ansible_network_os=ios ansible_python_interpreter=/usr/bin/python3
+; iosxe_recomm ansible_host=sandbox-iosxe-recomm-1.cisco.com ansible_user=developer ansible_password=C1sco12345 ansible_port=22 ansible_python_interpreter=/usr/bin/python3
+; iosxe_latest ansible_host=host=sandbox-iosxe-latest-1.cisco.com  ansible_user=developer ansible_password=C1sco12345 ansible_port=22 ansible_python_interpreter=/usr/bin/python3
+; [sandbox]
+; iosxe_sb ansible_host=sandbox-iosxe-recomm-1.cisco.com ansible_user=developer ansible_password=lastorangerestoreball8876 ansible_port=22 ansible_python_interpreter=/usr/bin/python3
+; [csr_sandbox]
+; iosxe_recomm ansible_host=sandbox-iosxe-recomm-1.cisco.com ansible_user=developer ansible_password=C1sco12345 ansible_port=22 ansible_python_interpreter=/usr/bin/python3
+; iosxe_latest ansible_host=host=sandbox-iosxe-latest-1.cisco.com  ansible_user=developer ansible_password=C1sco12345 ansible_port=22 ansible_python_interpreter=/usr/bin/python3
+; [dnac_sandbox]
+; dnac ansible_host=sandboxdnac2.cisco.com ansible_user=devnetuser ansible_password=Cisco123! ansible_port=22 ansible_python_interpreter=/usr/bin/python3
+; [reserved]
+; iosxe_reserved ansible_host=10.10.20.48 ansible_user=developer ansible_password=C1sco12345 ansible_port=22 ansible_python_interpreter=/usr/bin/python3
+; [webservers]
+; 192.0.2.3 ansible_ssh_user=devasc ansible_ssh_pass=Cisco123! ansible_python_interpreter=/usr/bin/python3

@@ -1,0 +1,45 @@
+---
+- name: ios_facts
+  hosts: routers
+  gather_facts: false
+  connection: local
+  tasks:
+    - name: Collect information about IOS version
+      ios_facts:
+        gather_subset:
+          - hardware
+        gather_network_resources:
+          - all
+      register: ios_version
+      ansible_python_interpreter: "/usr/bin/python3"
+
+    - name: Display IOS version information
+      debug:
+        var: ios_version
+      ansible_python_interpreter: "/usr/bin/python3"
+
+    - name: Collect information about L3 interfaces
+      ios_facts:
+        gather_subset:
+          - interfaces
+        gather_network_resources:
+          - all
+      register: l3_interfaces
+      ansible_python_interpreter: "/usr/bin/python3"
+
+    - name: Display L3 interface information
+      debug:
+        var: l3_interfaces
+        ansible_python_interpreter: "/usr/bin/python3"
+
+    - name: Configure logging buffer with a size of 5000 bytes
+      ios_command:
+        commands:
+          - logging buffered 5000
+      register: logging_result
+      ansible_python_interpreter: "/usr/bin/python3"
+
+    - name: Display logging configuration result
+      debug:
+        var: logging_result
+        ansible_python_interpreter: "/usr/bin/python3"
