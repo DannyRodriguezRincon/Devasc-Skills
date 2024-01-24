@@ -1,7 +1,7 @@
 Task name => DNAC FILTERING
 
 Task preparation => what preparation is necessary to perform the task?
-  First we make a folder named Bash where we will put all the needed files inside.
+  First we make a folder named FILTERING_DNAC_RESPONSE_DAT where we will put all the needed files inside.
   Then we copy the DNAC SAMPLE script into the Bash folder
   
 # import XXXXAXXXX
